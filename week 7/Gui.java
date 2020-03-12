@@ -2,9 +2,11 @@ import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JTextField;
 
 public class Gui extends JFrame {
-
+    
+    private static final long serialVersionUID = 1L;
     private GridBagConstraints constraints;
 
     public Gui() {
@@ -17,6 +19,7 @@ public class Gui extends JFrame {
         addHumanLabel();
         addTigerLabel();
         addElephanteLabel();
+        newTextField();
     }
 
     private void addHeadingLabel() {
@@ -61,6 +64,17 @@ public class Gui extends JFrame {
 
         this.add(ElephanteLabel, constraints);
     }
+
+    private void newTextField() {
+        JLabel textField = new JTextField();
+
+        constraints.gridx = 1;
+        constraints.gridy = 1;
+        constraints.gridwidth = 1;
+
+        this.add(textField, constraints);
+    }
+
 
 
  public static void main(String args[])
